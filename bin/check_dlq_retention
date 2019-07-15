@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative '../environment'
+
+module Garrison
+  module Checks
+    @options[:threshold] = ENV['GARRISON_SQS_MESSAGE_RETENTION_THRESHOLD']
+    check = CheckDeadLetterQueueRetention.new(@options)
+    check.run
+  end
+end
