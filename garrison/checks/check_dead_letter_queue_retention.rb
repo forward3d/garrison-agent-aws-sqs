@@ -33,7 +33,7 @@ module Garrison
             alert(
               name: 'DLQ Message Retention Violation',
               target: queue["QueueArn"],
-              detail: "message_retention_period: #{q["MessageRetentionPeriod"]} (<#{options[:threshold]})",
+              detail: "message_retention_period: #{queue["MessageRetentionPeriod"]} (<#{options[:threshold]})",
               finding: queue.to_h.to_json,
               finding_id: "aws-sqs-#{queue["QueueArn"]}-dlqmessageretention",
               urls: [
