@@ -2,7 +2,7 @@ module Garrison
   class AwsHelper
 
     def self.whoami
-      @whoami ||= Aws::STS::Client.new(region: 'us-east-1').get_caller_identity
+      @whoami ||= Aws::STS::Client.new(region: 'us-east-1').get_caller_identity.account
     end
 
     def self.all_regions
