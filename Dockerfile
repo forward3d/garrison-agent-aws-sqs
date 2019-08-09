@@ -18,6 +18,8 @@ RUN find /usr/local/bundle -iname '*.a' -exec rm {} \;
 # RUNTIME CONTAINER
 FROM ruby:2.6-alpine3.10
 
+RUN apk upgrade --no-cache
+
 WORKDIR /usr/src/garrison-agent
 COPY --from=build /usr/local/bundle /usr/local/bundle
 COPY --from=build /usr/src/garrison-agent /usr/src/garrison-agent

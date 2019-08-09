@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2019-08-09
+### Changed
+- Run `apk upgrade --no-cache` in Dockerfile runtime container
+- Bump aws-sdk-sqs from 1.17.0 to 1.20.0
+
 ## [1.0.1] - 2019-07-16
 ### Changed
 - Bug fix on alert generation
