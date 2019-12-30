@@ -1,4 +1,4 @@
-FROM ruby:2.6-alpine3.10 as build
+FROM ruby:2.7.0-alpine3.10 as build
 MAINTAINER developers@forward3d.com
 
 RUN mkdir -p /usr/src/garrison-agent
@@ -16,7 +16,7 @@ RUN find /usr/local/bundle -iname '*.a' -exec rm {} \;
 
 
 # RUNTIME CONTAINER
-FROM ruby:2.6-alpine3.10
+FROM ruby:2.7.0-alpine3.10
 
 RUN apk upgrade --no-cache
 
